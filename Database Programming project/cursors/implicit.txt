@@ -1,0 +1,11 @@
+Set serveroutput on
+BEGIN
+DELETE FROM Restaurant
+where location='Sylhet';
+
+IF SQL%NOTFOUND THEN
+	DBMS_OUTPUT.PUT_LINE('No maching record');
+ELSIF SQL%FOUND then DBMS_OUTPUT.PUT_LINE('DATA Successfully deleted');
+END IF;
+END;
+/

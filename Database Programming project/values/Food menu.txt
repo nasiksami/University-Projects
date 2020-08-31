@@ -1,0 +1,12 @@
+insert into Food_Menu values('I01','Pizza','western', 30);
+insert into Food_Menu values('I02','Burger','western', 10);
+insert into Food_Menu values('I03','Pasta','western', 15);
+insert into Food_Menu values('I04','Shwarma','western', 5);
+insert into Food_Menu values('I05','Nasi Ayam','malay', 6);
+insert into Food_Menu values('I06','Nasi Lemak','malay', 7);
+insert into Food_Menu values('I07','Nasi Goreng Pataya','malay', 6);
+insert into Food_Menu values('I08','Ayam kunit','malay', 5);
+insert into Food_Menu values('I09','Roti Canai','indian', 8);
+insert into Food_Menu values('I10','Tanduri','indian', 6);
+insert into Food_Menu values('I11','Biryani','indian', 10);
+insert into Food_Menu values('I12','Kacchi','indian', 12);

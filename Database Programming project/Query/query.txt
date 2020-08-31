@@ -1,0 +1,330 @@
+SQL> insert into customer values(166221,'Mojid','Orick','Ori',0164105,'oori@gmail.com','I09');
+
+1 row created.
+
+
+
+Normal Select Statement to see the details of customers
+
+SQL> select * from customer;
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+164322   humby           Gerave          Rai                156652
+ji232ii@gmail.com    I01
+
+162324   Zalali          Akash           Ahmad              276623
+kiz86i@gmail.com     I05
+
+162352   Jib             Nasik           Sami               176232
+nasikii@gmail.com    I09
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+167865   Fel             Zian            Ali                176644
+afiquezian@gmail.com I10
+
+186542   Saap            Janwar          Sani               276452
+janwar@gmail.com     I12
+
+153766   Bolod           Tawsif          Mia                136754
+chor@gmail.com       I12
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+163322   Makkhi          Amir            Saki               143652
+sadia@gmail.com      I12
+
+122233   Gadha           Meem            Dota               123392
+maal@gmail.com       I02
+
+163221   Iot             Md              Sarif              164905
+jiuuh@gmail.com      I05
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+166777   Mokles          Md              Sarif              176322
+jizzi@gmail.com      I02
+
+166221   Mojid           Orick           Ori                164105
+oori@gmail.com       I09
+
+
+11 rows selected.
+
+
+
+
+
+
+
+Select Statement to find people with certain first name
+
+SQL> select customer_id,customer_fname,customer_lname from customer where customer_fname='Akash';
+
+CUSTOMER CUSTOMER_FNAME  CUSTOMER_L
+-------- --------------- ----------
+162324   Akash           Ahmad
+
+Finding Restaurants from same location using Join                                               
+
+SQL> select restaurant_id,restaurant.manager_id, restaurant_name,location
+  2  from restaurant,manager
+  3  where location='Sylhet' AND restaurant.manager_id=     manager.manager_id;
+
+RESTAURANT_ID MANAGER_ID RESTAURANT_NAME LOCATION
+------------- ---------- --------------- ---------------
+       987751     136988 Restaurant Syl  Sylhet
+       982555     122558 Restaurant Taj  Sylhet
+       111111     744342 Restaurant Miz  Sylhet
+
+
+
+
+
+Finding the bill of a certain person using Join (Condition: Name= Md Sarif)
+
+SQL> select customer.customer_id,customer_fname,customer_lname,booking_id,
+  2 booking_date,checkout_date,customer.Item_id,Item_name,Item_type,
+  3 price from customer, booking,food_menu 
+  4 Where customer.customer_id= booking.customer_id AND    
+  5 customer.Item_ID=food_menu.item_Id AND customer_fname='Md' AND     
+  6 customer_lname='Sarif';
+
+
+CUSTOMER CUSTOMER_FNAME  CUSTOMER_L BOOKING_ID BOOKING_D CHECKOUT_ ITEM_ID
+-------- --------------- ---------- ---------- --------- --------- --------
+ITEM_NAME       ITEM_TYPE       PRICE
+--------------- ---------- ----------
+163221   Md              Sarif          156331 25-DEC-19 28-DEC-19 I05
+Nasi Ayam       malay               6
+
+166777   Md              Sarif          189766 27-FEB-18 01-MAR-18 I02
+Burger          western            10
+
+166777   Md              Sarif          876623 28-AUG-18 02-SEP-18 I02
+Burger          western            10
+
+
+
+
+
+Finding the Restaurant name and location of a manager’s Restaurant using subquery
+
+SQL> select restaurant_name, location,restaurant_phone as contact from restaurant
+  2  where manager_id=(select manager_id from manager
+  3  where manager_fname='Mujib' AND manager_lname='Ali');
+
+RESTAURANT_NAME LOCATION           CONTACT
+--------------- --------------- ----------
+Restaurant Miz  Sylhet              265122
+
+
+
+
+Update a table to change a value  
+                                                         
+SQL> select * from customer;
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+164322   humby           Gerave          Rai                156652
+ji232ii@gmail.com    I01
+
+162324   Zalali          Akash           Ahmad              276623
+kiz86i@gmail.com     I05
+
+162352   Jib             Nasik           Sami               176232
+nasikii@gmail.com    I09
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+167865   Fel             Zian            Ali                176644
+afiquezian@gmail.com I10
+
+186542   Saap            Janwar          Sani               276452
+janwar@gmail.com     I12
+
+153766   Bolod           Tawsif          Mia                136754
+chor@gmail.com       I12
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+163322   Makkhi          Amir            Saki               143652
+sadia@gmail.com      I12
+
+122233   Gadha           Meem            Dota               123392
+maal@gmail.com       I02
+
+163221   Iot             Md              Sarif              164905
+jiuuh@gmail.com      I05
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+166777   Mokles          Md              Sarif              176322
+jizzi@gmail.com      I02
+
+166221   Mojid           Orick           Ori                164105
+oori@gmail.com       I09
+
+
+11 rows selected.
+
+
+
+
+
+
+SQL> update customer
+  2  set customer_username='Borodhon'
+  3  where customer_fname='Zian'AND customer_lname='Ali';
+
+1 row updated.
+
+SQL> select * from customer;
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+164322   humby           Gerave          Rai                156652
+ji232ii@gmail.com    I01
+
+162324   Zalali          Akash           Ahmad              276623
+kiz86i@gmail.com     I05
+
+162352   Jib             Nasik           Sami               176232
+nasikii@gmail.com    I09
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+167865   Borodhon        Zian            Ali                176644
+afiquezian@gmail.com I10
+
+186542   Saap            Janwar          Sani               276452
+janwar@gmail.com     I12
+
+153766   Bolod           Tawsif          Mia                136754
+chor@gmail.com       I12
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+163322   Makkhi          Amir            Saki               143652
+sadia@gmail.com      I12
+
+122233   Gadha           Meem            Dota               123392
+maal@gmail.com       I02
+
+163221   Iot             Md              Sarif              164905
+jiuuh@gmail.com      I05
+
+
+CUSTOMER CUSTOMER_USERNA CUSTOMER_FNAME  CUSTOMER_L CUSTOMER_PHONE
+-------- --------------- --------------- ---------- --------------
+CUSTOMER_EMAIL       ITEM_ID
+-------------------- --------
+166777   Mokles          Md              Sarif              176322
+jizzi@gmail.com      I02
+
+166221   Mojid           Orick           Ori                164105
+oori@gmail.com       I09
+
+
+11 rows selected.
+
+
+
+
+
+Delete values from a table 
+
+SQL> select * from payment;
+
+PAYMENT_ID CUSTOMER BOOKING_ID PAYMENT_AMOUNT PAYMENT_D
+---------- -------- ---------- -------------- ---------
+    654423 166777       156331           3150 02-MAR-19
+    654421 162324       166666           1950 21-MAR-19
+    621123 167865       152341                25-JAN-19
+    554423 162352       296651           8400 28-FEB-19
+    123123 186542       656331                25-FEB-19
+    786524 153766       199331            850 27-FEB-19
+    907699 163322       185331           8500 25-APR-17
+    623313 122233       136391           1300 30-JUL-18
+    234567 164322       198331                01-APR-71
+
+9 rows selected.
+
+
+SQL> delete from payment
+  2  where payment_amount>=8000;
+
+2 rows deleted.
+
+SQL> select * from payment;
+
+PAYMENT_ID CUSTOMER_ID BOOKING_ID PAYMENT_AMOUNT PAYMENT_D                      
+---------- ----------- ---------- -------------- ---------                      
+    621123      157865     152341                25-JAN-19                      
+    123123      176542     656331                25-FEB-19                      
+    786524      143766     199331            850 27-FEB-19                      
+    234567      154322     198331                01-APR-71                      
+    654423      156777     156331           3150 02-MAR-19                      
+    654421      152324     166666           1950 21-MAR-19                      
+    623313      112233     136391           1300 30-JUL-18                      
+
+7 rows selected.
+
+Creating a view
+
+SQL> create view manager_count
+  2  as select restaurant_id, manager_id, restaurant_name
+  3  from restaurant
+  4  order by manager_id DESC;
+
+View created.
+
+
+
+
+
+Join a table with a view to find people with First Name Rojaro
+
+
+SQL> select * from (select m.manager_id,manager_fname,manager_lname,Restaurant_name
+  2      from manager_count l,manager m
+  3      where m.manager_id=l.manager_id AND manager_fname='Rojaro');
+
+MANAGER_ID MANAGER_FN MANAGER_LN RESTAURANT_NAME
+---------- ---------- ---------- ---------------
+    136625 Rojaro     Alim       Restaurant Mihh
+    126777 Rojaro     shen       Restaurant Taj
+
+

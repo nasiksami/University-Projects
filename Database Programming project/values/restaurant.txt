@@ -1,0 +1,12 @@
+insert into Restaurant values(987755,126777,'Restaurant Taj','Gombak',655422);
+insert into Restaurant values(988772,136625,'Restaurant Mihh','Idaman',655222);
+insert into Restaurant values(163265,146729,'Marks','Selangor',152443);
+insert into Restaurant values(875542,128762,'Plaza UU','Gombak',652222);
+insert into Restaurant values(692553,134331,'Yumi Ila','Idaman',324229);
+insert into Restaurant values(765430,114231,'Restaurant Juyy','Idaman',298554);
+insert into Restaurant values(987654,104532,'Restaurant Maya','Langkawi',652422);
+insert into Restaurant values(987751,136988,'Restaurant Syl','Sylhet',651232);
+insert into Restaurant values(982555,122558,'Restaurant Taj','Sylhet',611422);
+insert into Restaurant values(895442,124556,'HT Mango','Langkawi',987722);
+insert into Restaurant values(111111,744342,'Restaurant Miz','Sylhet',265122);
+

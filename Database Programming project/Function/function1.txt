@@ -1,0 +1,53 @@
+CREATE OR REPLACE FUNCTION citydisc    
+(p_id in number)
+return number
+is
+price number;
+p_type varchar2(12);
+p_title varchar2(12);
+p_bookingdate date;
+p_checkoutdate date;
+p_location varchar(12);
+c_number number;
+
+BEGIN
+select booking_type,booking_title,checkout_date,booking_date,location into p_type,p_title,p_checkoutdate,p_bookingdate,p_location from booking join Restaurant on booking.manager_id=Restaurant.manager_id 
+AND (p_id=booking_id);
+
+if p_location='Gombak' then c_number:=1.4;
+elsif p_location='Idaman' then c_number:=1.3;
+elsif p_location='Selangor' then c_number:=1.6;
+elsif p_location='Sylhet' then c_number:=1.8;
+elsif p_location='Langkawi' then c_number:=2;
+end if;
+
+if p_type='Eatin'  AND   p_title='Western' then price :=(10+500)*(p_checkoutdate-p_bookingdate)*c_number;
+elsif p_type='Take Away' AND  p_title='Western' then price:=(15+500)*(p_checkoutdate-p_bookingdate)*c_number;
+elsif p_type='Eatin' AND  p_title='Indian ' then price:=(10+250)*(p_checkoutdate-p_bookingdate)*c_number;
+elsif p_type='Take Away' AND p_title='indian' then price:=(15+250)*(p_checkoutdate-p_bookingdate)*c_number;
+elsif p_type='Take Away' AND p_title='Malay' then price:=(15+250)*(p_checkoutdate-p_bookingdate)*c_number;
+elsif p_type='Eatin' AND p_title='Malay' then price:=(10+250)*(p_checkoutdate-p_bookingdate)*c_number;
+
+end if;
+
+return(price);
+end;                                    
+/    
+
+
+--ANONYMOUS BLOCK 
+--===========================
+
+ACCEPT p_id prompt 'Enter Booking ID:'
+declare
+p_id number;
+
+BEGIN
+p_id:=&p_id;
+
+
+DBMS_OUTPUT.put_line
+('Total Bill is : RM'||citydisc(p_id));
+END;
+/
+

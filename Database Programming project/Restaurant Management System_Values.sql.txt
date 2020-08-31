@@ -1,0 +1,78 @@
+insert into customer values(166777,'Mokles','Md','Sarif',0176322,'jizzi@gmail.com','I02');
+insert into customer values(162324,'Zalali','Akash','Ahmad',0276623,'kiz86i@gmail.com','I05');
+insert into customer values(162352,'Jib','Nasik','Sami',0176232,'nasikii@gmail.com','I09');
+insert into customer values(167865,'Fel','Zian','Ali',0176644,'afiquezian@gmail.com','I10');
+insert into customer values(186542,'Saap','Janwar','Sani',0276452,'janwar@gmail.com','I12');
+insert into customer values(153766,'Bolod','Tawsif','Mia',0136754,'chor@gmail.com','I12');
+insert into customer values(163322,'Makkhi','Amir','Saki',0143652,'sadia@gmail.com','I12');
+insert into customer values(122233,'Gadha','Meem','Dota',0123392,'maal@gmail.com','I02');
+insert into customer values(164322,'humby','Gerave','Rai',0156652,'ji232ii@gmail.com','I01');
+insert into customer values(163221,'Iot','Md','Sarif',0164905,'jiuuh@gmail.com','I05');
+
+
+insert into manager values(126777,'Rojaro','shen',112755);
+insert into manager values(136625,'Rojaro','Alim',113725);
+insert into manager values(146729,'Robert','Smith',236955);
+insert into manager values(128762,'Micle','Ubala',446555);
+insert into manager values(134331,'Eka','kappor',114325);
+insert into manager values(114231,'Baal','Saad',142455);
+insert into manager values(104532,'Hero','Alom',134229);
+insert into manager values(136988,'Joya','Ahsan',129325);
+insert into manager values(122558,'Abul','Hayat',543200);
+insert into manager values(119577,'Murad','Takla',985321);
+insert into manager values(164332,'Sanai','Takla',114235);
+insert into manager values(124556,'Joya','Ubala',114325);
+insert into manager values(744342,'Mujib','Ali',117625);
+
+
+
+insert into booking values(156331,126777,163221,'Indian','Eatin',to_date('25-DEC-19'),to_date('28-DEC-19'));
+insert into booking values(166666,114231,164322,'Western','Take Away',to_date('25-DEC-19'),to_date('27-DEC-19'));
+insert into booking values(152341,744342,122233,'Malay','Eatin',to_date('22-NOV-19'),to_date('24-NOV-19'));
+insert into booking values(296651,164332,163322,'Western','Take Away',to_date('02-DEC-19'),to_date('08-DEC-19'));
+insert into booking values(656331,122558,153766,'Indian','Take Away',to_date('24-DEC-19'),to_date('26-DEC-19'));
+insert into booking values(199331,128762,186542,'Malay','Eatin',to_date('24-DEC-19'),to_date('25-DEC-19'));
+insert into booking values(185331,744342,167865,'Western','Eatin',to_date('02-DEC-17'),to_date('08-DEC-17'));
+insert into booking values(136391,126777,162352,'Indian','Take Away',to_date('29-NOV-18'),to_date('30-NOV-18'));
+insert into booking values(198331,122558,162324,'Malay','Eatin',to_date('26-NOV-17'),to_date('29-NOV-17'));
+insert into booking values(189766,124556,166777,'Western','Take Away',to_date('27-FEB-18'),to_date('01-MAR-18'));
+insert into booking values(876623,136625,166777,'Indian','Eatin',to_date('28-AUG-18'),to_date('02-SEP-18'));
+
+
+
+insert into Restaurant values(987755,126777,'Restaurant Taj','Gombak',655422);
+insert into Restaurant values(988772,136625,'Restaurant Mihh','Idaman',655222);
+insert into Restaurant values(163265,146729,'Marks','Selangor',152443);
+insert into Restaurant values(875542,128762,'Plaza UU','Gombak',652222);
+insert into Restaurant values(692553,134331,'Yumi Ila','Idaman',324229);
+insert into Restaurant values(765430,114231,'Restaurant Juyy','Idaman',298554);
+insert into Restaurant values(987654,104532,'Restaurant Maya','Langkawi',652422);
+insert into Restaurant values(987751,136988,'Restaurant Syl','Sylhet',651232);
+insert into Restaurant values(982555,122558,'Restaurant Taj','Sylhet',611422);
+insert into Restaurant values(895442,124556,'HT Mango','Langkawi',987722);
+insert into Restaurant values(111111,744342,'Restaurant Miz','Sylhet',265122);
+
+
+
+insert into payment values(654423,166777,156331,3150,to_date('02-MAR-19'));
+insert into payment values(654421,162324,166666,1950,to_date('21-MAR-19'));
+insert into payment values(621123,167865,152341,null,to_date('25-JAN-19'));
+insert into payment values(554423,162352,296651,8400,to_date('28-FEB-19'));
+insert into payment values(123123,186542,656331,null,to_date('25-FEB-19'));
+insert into payment values(786524,153766,199331,850,to_date('27-FEB-19'));
+insert into payment values(907699,163322,185331,8500,to_date('25-APR-17'));
+insert into payment values(623313,122233,136391,1300,to_date('30-JUL-18'));
+insert into payment values(234567,164322,198331,null,to_date('01-APR-71'));
+
+insert into Food_Menu values('I01','Pizza','western', 30);
+insert into Food_Menu values('I02','Burger','western', 10);
+insert into Food_Menu values('I03','Pasta','western', 15);
+insert into Food_Menu values('I04','Shwarma','western', 5);
+insert into Food_Menu values('I05','Nasi Ayam','malay', 6);
+insert into Food_Menu values('I06','Nasi Lemak','malay', 7);
+insert into Food_Menu values('I07','Nasi Goreng Pataya','malay', 6);
+insert into Food_Menu values('I08','Ayam kunit','malay', 5);
+insert into Food_Menu values('I09','Roti Canai','indian', 8);
+insert into Food_Menu values('I10','Tanduri','indian', 6);
+insert into Food_Menu values('I11','Biryani','indian', 10);
+insert into Food_Menu values('I12','Kacchi','indian', 12);

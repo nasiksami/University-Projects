@@ -1,0 +1,25 @@
+create or replace procedure newval
+(h_Restaurant_id Restaurant.Restaurant_id%TYPE,
+ h_manager_id Restaurant.manager_id%TYPE,
+ h_Restaurant_name Restaurant.Restaurant_name%TYPE,
+ h_location Restaurant.location%TYPE,
+ h_Restaurant_phone Restaurant.Restaurant_phone%TYPE
+) IS
+BEGIN
+INSERT INTO Restaurant (Restaurant.Restaurant_id,Restaurant.manager_id,Restaurant.Restaurant_name,Restaurant.location,Restaurant.Restaurant_phone) 
+VALUES (h_Restaurant_id,h_manager_id,h_Restaurant_name,h_location,h_Restaurant_phone);
+DBMS_OUTPUT.PUT_LINE('Data successfully added');
+END;
+/
+--ANONYMOUS BLOCK 
+--===========================
+ACCEPT h_Restaurant_id prompt 'ENTER RESTAURANT ID: '
+ACCEPT h_manager_id prompt 'ENTER MANAGER ID: '
+ACCEPT h_Restaurant_name prompt 'ENTER RESTAURANT NAME: '
+ACCEPT h_location prompt 'ENTER LOCATION: '
+ACCEPT h_Restaurant_phone prompt 'ENTER RESTAURANT PHONE NUMBER: '
+
+BEGIN
+newval('&h_Restaurant_id','&h_manager_id','&h_Restaurant_name','&h_location','&h_Restaurant_phone');
+END;
+/

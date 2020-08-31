@@ -1,0 +1,32 @@
+create or replace procedure call2(c_customer_ID customer.customer_id%TYPE,c_customer_username customer.customer_username%TYPE) IS
+fname varchar2(20);
+lname varchar2(20);
+phone number;
+email varchar2(20);
+  
+        BEGIN
+        select customer_fname,customer_lname,customer_phone,customer_email into fname,lname,phone,email
+        from customer
+        where c_customer_id=customer_id
+        AND c_customer_username=customer_username;
+ 
+      dbms_output.put_line('First Name: '||fname);
+      dbms_output.put_line('Last Name: '||lname);
+      dbms_output.put_line('Phone Number: '||phone);
+      dbms_output.put_line('Email: '||email);
+      end;
+      /
+
+--ANONYMOUS BLOCK 
+--===========================
+
+ACCEPT custID PROMPT 'Enter the customer ID: '
+
+ACCEPT cust_username PROMPT 'Enter the Customer username: '
+
+begin
+call2('&custID','&cust_username');
+
+dbms_output.put_line('THe data is successfully entered.');
+end;
+/

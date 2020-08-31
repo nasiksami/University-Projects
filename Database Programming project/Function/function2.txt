@@ -1,0 +1,39 @@
+CREATE OR REPLACE FUNCTION discount1   
+(c_id in number)
+return number
+is
+discount number;
+p_checkoutdate date;
+p_paymentdate date;
+
+
+BEGIN
+select checkout_date,payment_date into p_checkoutdate,p_paymentdate from booking join payment on payment.booking_id=booking.booking_id 
+AND (c_id=payment.booking_id);
+
+if (p_paymentdate-p_checkoutdate)<0 then discount:=.2;
+elsif (p_paymentdate-p_checkoutdate)>=0 AND (p_paymentdate-p_checkoutdate)<5 then discount:=.1;
+elsif (p_paymentdate-p_checkoutdate)>5 then discount:=.05;
+end if;
+
+return(discount);
+end;                                    
+/    
+
+--ANONYMOUS BLOCK 
+--===========================
+
+ACCEPT c_id prompt 'Enter Booking ID:'
+declare
+c_id number;
+
+BEGIN
+c_id:=&c_id;
+
+
+DBMS_OUTPUT.put_line
+('Total Discount is '||discount1(c_id));
+END;
+/
+
+

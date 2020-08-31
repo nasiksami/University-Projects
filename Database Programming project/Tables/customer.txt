@@ -1,0 +1,14 @@
+drop table Customer cascade constraints;
+
+
+create table Customer
+ (Customer_Id varchar2(8),
+ Customer_Username varchar2(15) not null,
+ Customer_fname varchar2(15) not null,
+ Customer_lname varchar2(10) not null,
+ Customer_Phone number(15),
+ Customer_Email varchar2(20),
+Item_ID varchar2(8),
+ primary key(Customer_Id),
+foreign key(Item_ID) references Food_Menu(Item_ID));
+

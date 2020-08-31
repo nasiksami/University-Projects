@@ -1,0 +1,16 @@
+
+drop table Booking cascade constraints;
+
+
+create table Booking
+(Booking_Id number(8),
+Manager_Id number(8),
+Customer_Id varchar2(8),
+Booking_Title varchar2(15),
+Booking_Type varchar2(15) not null,
+Booking_Date date not null,
+Checkout_Date date not null,
+primary key(Booking_Id),
+foreign key(Manager_Id) references Manager(Manager_Id),
+foreign key(Customer_Id) references Customer(Customer_Id));
+

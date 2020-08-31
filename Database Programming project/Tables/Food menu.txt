@@ -1,0 +1,9 @@
+drop table Food_Menu cascade constraints;
+
+
+create table Food_Menu
+(Item_ID varchar2(8) not null,
+Item_Name varchar2(15)  null,
+Item_Type varchar2(10),
+Price number(4),
+primary key (Item_ID));

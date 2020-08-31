@@ -1,0 +1,10 @@
+drop table Restaurant cascade constraints;
+
+
+create table Restaurant
+(Restaurant_Id number(8),
+Manager_Id number(8),
+Restaurant_Name varchar2(15) not null,
+Location varchar2(15),
+Restaurant_Phone number,
+primary key (Restaurant_Id));

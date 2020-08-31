@@ -1,0 +1,18 @@
+set serveroutput on
+set verify off
+Declare 
+cursor C1 IS select Customer_Id, Customer_username from customer;
+vc_Id customer.Customer_Id%type;
+vc_Uname customer.Customer_Username%type;
+begin 
+open C1;
+loop 
+fetch C1 into vc_Id, vc_Uname;
+exit when C1% notfound;
+Dbms_output.put_line  (vc_Id ||'---------------'|| vc_Uname);
+end loop;
+close C1;
+end;
+/
+
+

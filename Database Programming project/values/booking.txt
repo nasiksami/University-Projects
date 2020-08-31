@@ -1,0 +1,12 @@
+insert into booking values(156331,126777,163221,'Indian','Eatin',to_date('25-DEC-19'),to_date('28-DEC-19'));
+insert into booking values(166666,114231,164322,'Western','Take Away',to_date('25-DEC-19'),to_date('27-DEC-19'));
+insert into booking values(152341,744342,122233,'Malay','Eatin',to_date('22-NOV-19'),to_date('24-NOV-19'));
+insert into booking values(296651,164332,163322,'Western','Take Away',to_date('02-DEC-19'),to_date('08-DEC-19'));
+insert into booking values(656331,122558,153766,'Indian','Take Away',to_date('24-DEC-19'),to_date('26-DEC-19'));
+insert into booking values(199331,128762,186542,'Malay','Eatin',to_date('24-DEC-19'),to_date('25-DEC-19'));
+insert into booking values(185331,744342,167865,'Western','Eatin',to_date('02-DEC-17'),to_date('08-DEC-17'));
+insert into booking values(136391,126777,162352,'Indian','Take Away',to_date('29-NOV-18'),to_date('30-NOV-18'));
+insert into booking values(198331,122558,162324,'Malay','Eatin',to_date('26-NOV-17'),to_date('29-NOV-17'));
+insert into booking values(189766,124556,166777,'Western','Take Away',to_date('27-FEB-18'),to_date('01-MAR-18'));
+insert into booking values(876623,136625,166777,'Indian','Eatin',to_date('28-AUG-18'),to_date('02-SEP-18'));
+

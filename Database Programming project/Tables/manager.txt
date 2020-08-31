@@ -1,0 +1,9 @@
+drop table Manager cascade constraints;
+
+
+create table Manager
+(Manager_Id number(8) ,
+Manager_fname varchar2(10) not null,
+Manager_lname varchar2(10) not null,
+Manager_Phone number(15),
+primary key(Manager_Id));

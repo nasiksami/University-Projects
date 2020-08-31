@@ -1,0 +1,68 @@
+drop table Booking cascade constraints;
+drop table Customer cascade constraints;
+drop table Restaurant cascade constraints;
+drop table Manager cascade constraints;
+drop table Payment cascade constraints;
+drop table Food_Menu cascade constraints;
+
+create table Customer
+ (Customer_Id varchar2(8),
+ Customer_Username varchar2(15) not null,
+ Customer_fname varchar2(15) not null,
+ Customer_lname varchar2(10) not null,
+ Customer_Phone number(15),
+ Customer_Email varchar2(20),
+Item_ID varchar2(8),
+ primary key(Customer_Id),
+foreign key(Item_ID) references Food_Menu(Item_ID));
+
+
+create table Restaurant
+(Restaurant_Id number(8),
+Manager_Id number(8),
+Restaurant_Name varchar2(15) not null,
+Location varchar2(15),
+Restaurant_Phone number,
+primary key (Restaurant_Id));
+
+create table Booking
+(Booking_Id number(8),
+Manager_Id number(8),
+Customer_Id varchar2(8),
+Booking_Title varchar2(15),
+Booking_Type varchar2(15) not null,
+Booking_Date date not null,
+Checkout_Date date not null,
+primary key(Booking_Id),
+foreign key(Manager_Id) references Manager(Manager_Id),
+foreign key(Customer_Id) references Customer(Customer_Id));
+
+
+create table Manager
+(Manager_Id number(8) ,
+Manager_fname varchar2(10) not null,
+Manager_lname varchar2(10) not null,
+Manager_Phone number(15),
+primary key(Manager_Id));
+
+
+
+create table Payment
+(Payment_Id number(8),
+Customer_Id varchar2(8),
+Booking_Id number(8),
+Payment_Amount number,
+Payment_Date date not null,
+primary key (Payment_Id),
+foreign key (Customer_Id) references Customer(Customer_Id),
+foreign key (Booking_Id) references Booking(Booking_Id));
+
+
+create table Food_Menu
+(Item_ID varchar2(8) not null,
+Item_Name varchar2(15)  null,
+Item_Type varchar2(10),
+Price number(4),
+primary key (Item_ID));
+
+

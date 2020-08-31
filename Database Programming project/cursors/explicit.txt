@@ -1,0 +1,23 @@
+Declare 
+c_customer_id customer.customer_id%TYPE;
+c_customer_FNAME customer.customer_fname%TYPE;
+c_customer_LNAME customer.customer_lname%TYPE;
+
+
+	CURSOR customer_cursor IS
+	select customer_id,customer_fname,customer_lname
+	from customer;
+BEGIN
+	OPEN customer_cursor;
+	LOOP 
+	FETCH customer_cursor into c_customer_id,c_customer_FNAME,c_customer_LNAME;
+	EXIT WHEN customer_cursor%ROWCOUNT >5 OR	
+				customer_cursor%NOTFOUND;
+	DBMS_OUTPUT.PUT_LINE
+	(to_char(c_customer_id)||'          '||c_customer_FNAME||'          '||c_customer_LNAME);
+	END LOOP;
+CLOSE customer_cursor;
+END;
+/
+
+-----------------------------------------------------------------------------------------------

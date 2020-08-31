@@ -1,0 +1,13 @@
+drop table Payment cascade constraints;
+
+create table Payment
+(Payment_Id number(8),
+Customer_Id varchar2(8),
+Booking_Id number(8),
+Payment_Amount number,
+Payment_Date date not null,
+primary key (Payment_Id),
+foreign key (Customer_Id) references Customer(Customer_Id),
+foreign key (Booking_Id) references Booking(Booking_Id));
+
+

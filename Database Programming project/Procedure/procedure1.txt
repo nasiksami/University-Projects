@@ -1,0 +1,41 @@
+1.Sometimes customers change the booking date of the Restaurant. Using this procedure the user can update the booking date of a customer.
+
+---------------------------------------------------------------------------------------------------------------------
+create or replace procedure call(ID booking.booking_ID%TYPE,c_customer_id booking.customer_id%TYPE,newdate date) is
+BEGIN
+
+	update booking
+	set booking_date=newdate
+	where booking_id=ID and customer_id=c_customer_id;
+
+	DBMS_OUTPUT.PUT_LINE('The data has updated');
+END;
+/
+
+--ANONYMOUS BLOCK 
+--===========================
+
+
+ACCEPT ID PROMPT 'Enter the booking ID: '
+
+ACCEPT c_customer_id PROMPT 'Enter the Customer ID: '
+
+
+ACCEPT newdate PROMPT 'Enter the new booking date: '
+
+DECLARE
+
+  v_origdate booking.booking_date%type;
+
+BEGIN
+ select booking_date
+ into   v_origdate
+ from   booking
+ where  booking_id = '&ID'
+ and    customer_id ='&c_customer_id';
+
+call ('&ID', '&c_customer_id','&newdate');
+ DBMS_OUTPUT.PUT_LINE('Data updated ');
+END;
+/
+---------------------------------------------------------------------------------------------------------------------
