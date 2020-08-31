@@ -1,0 +1,4 @@
+This project was done by me and my group mates for the system design and architecture subject during my second semseter.
+In this project, we proposed an app for Companion tool for elderly people. Here we designed a system after doing several elicitation , such as 
+interview, questionniere, survey ect.Then we made our protorype in Balsamiq. We designed our project in different diagrams, such as Use case diagram, activity diagram, class diagram etc.
+We planned our project and showed in gantt chart form. Basically we designed a mobile app architecture for the help of elderly people.
