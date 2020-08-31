@@ -1,0 +1,313 @@
+SQL> Create Table Donor (Donor_Id varchar(5) not null,fName char(6),lName char(6),city char(7),state varchar(8),Zipcode number(6),TelNo number(11),Age number(3),Occupation char(9),S_ID varchar(6),PRIMARY KEY (Donor_ID)
+  2  );
+
+Table created.
+
+SQL> insert into Donor values ('C1569', 'Imtiaz', 'Sakib', 'Gombak', 'Selangor',53100, 0182874247,25,'Doctor', 'S1040');
+
+1 row created.
+
+SQL> 
+SQL> insert into Donor values ('C1420', 'Yang', 'Hao', 'Setapak', 'KL',54050,0185683756, 30,'Pilot', 'S1040');
+
+1 row created.
+
+SQL> 
+SQL> insert into Donor values ('C1430','Jack','Frost','Gombak', 'Selangor',53200,011567384, 40,'Writer', 'S1852');
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> insert into Donor values ('C1179', 'Piggy', 'Quene', 'KL', 'KL',50960,01115698346, 45,'Teacher', 'S1902');
+
+1 row created.
+
+SQL> 
+SQL> 
+SQL> insert into Donor values ('C2497', 'David', 'Thomas', 'Setapak', 'KL',54470,0183294618, 50,'Banker', 'S2506');
+
+1 row created.
+
+SQL> 
+SQL> Create Table Staff(S_Id varchar(5) not null,fName char(6),lName char(6),gender char(6),DOB date,TelNo number(11),S_type char(10),Street char(10) , City char(10),State char(10),Zipcode number(6),PRIMARY KEY (S_Id) );
+
+Table created.
+
+SQL> 
+SQL> insert into Staff values ('S1040','John','White','Male',to_date('01/11/1965','dd/mm/yyyy'),0184236952,'Manager','205 Lane','Setapak','KL',54470);
+
+1 row created.
+
+SQL> 
+SQL> insert into Staff values ('S2506','Ann','Beech','Female',to_date('10/10/1980','dd/mm/yyyy'),0114521252,'Assistant','1_Old road','Sri rampai','KL',54230);
+
+1 row created.
+
+SQL> 
+SQL> insert into Staff values ('S1525','David','Ford','Male',to_date('24/03/1978','dd/mm/yyyy'),0185258563,'Supervisor','JLN p5','Putra Jaya','Putra Jaya',62200);
+
+1 row created.
+
+SQL> 
+SQL> insert into Staff values ('S1852','Marry','Howe','Female',to_date('19/02/1985','dd/mm/yyyy'),0187478846,'Assistant','Semarak','Cyberjaya','Selangor',63000);
+
+1 row created.
+
+SQL> 
+SQL> insert into Staff values ('S1902','Nabil','Showki','Male',to_date('21/08/1988','dd/mm/yyyy'),0186936321,'Supervisor','Putra Ht','SubangJaya','Selangor',40400);
+
+1 row created.
+
+SQL> 
+SQL> Create Table Payment (P_ID varchar(8) not null,P_system char (9),P_date date,Amount_no number (8),Donor_ID varchar (8),PRIMARY KEY(P_ID));
+
+Table created.
+
+SQL> insert into Payment values('P00025','Cash',to_date('03/01/2017','dd/mm/yyyy'), 1300,'C1569');
+
+1 row created.
+
+SQL> 
+SQL>  insert into Payment values('P00028','Card',to_date('17/01/2017','dd/mm/yyyy'), 600,'C1420');
+
+1 row created.
+
+SQL> 
+SQL>  insert into Payment values('P00031','Card',to_date('14/02/2017','dd/mm/yyyy'), 300,'C1430');
+
+1 row created.
+
+SQL> 
+SQL>  insert into Payment values('P00037','Card',to_date('28/02/2017','dd/mm/yyyy'), 400,'C1179');
+
+1 row created.
+
+SQL> 
+SQL>  insert into Payment values('P00041','Cash',to_date('06/03/2017','dd/mm/yyyy'), 1500,'C2497');
+
+1 row created.
+
+SQL> 
+SQL> Create table recipient (R_ID varchar (6) not null, fName char (6), lName char (6), City char (10), State char (10), zip number (6), Telephone_No number (11), Age number (3),R_Type varchar (7) ,Occupation char (10), PRIMARY KEY (R_ID));
+
+Table created.
+
+SQL> Insert into recipient values('R102','Kuddus','Boyati','KL','KL',50088,0171225865,63,'Fakir','Watchman');
+
+1 row created.
+
+SQL> 
+SQL> Insert into recipient values('R103','Khan','Helal','SubangJaya','Selangor',47500,01526733,48,'Miskin','Labour');
+
+1 row created.
+
+SQL> 
+SQL> Insert into recipient values('R201','Maal','Muhith','Setapak','KL',53300,0885203455 ,39,'Garimin','Sweeper');
+
+1 row created.
+
+SQL> 
+SQL> Insert into recipient values('R205','Ahsan','Habib','Ampang','KL',55000,017122081656,53,'Riqab','Beggar');
+
+1 row created.
+
+SQL> 
+SQL> Insert into recipient values('R309','Mitila','Mujib','Setia Alam','ShahAlam',25000,01521428011,27,'Miskin','Unemployed');
+
+1 row created.
+
+SQL> 
+SQL> Insert into recipient values('R405','Naila','Nayem','WangsaMaju','KL',54820,01623019070,32,'Fakir','Plumber');
+
+1 row created.
+
+
+SQL> 
+SQL> 
+SQL> insert into donor values('C2991', 'Amad', 'solem','KL','KL',63000, 0189541292,69,'Actor','S1040');
+
+1 row created.
+
+SQL> select * from donor;
+
+DONOR FNAME  LNAME  CITY    STATE       ZIPCODE      TELNO        AGE OCCUPATION 
+----- ------ ------ ------- -------- ---------- ---------- ---------- ---------- 
+S_ID                                                                            
+------                                                                          
+C1569 Imtiaz Sakib  Gombak  Selangor      53100  182874247         25 Doctor    
+S1040                                                                           
+                                                                                
+C1420 Yang   Hao    Setapak KL            54050  185683756         30 Pilot     
+S1040                                                                           
+                                                                                
+C1430 Jack   Frost  Gombak  Selangor      53200   11567384         40 Writer    
+S1852                                                                           
+                                                                                
+
+DONOR FNAME  LNAME  CITY    STATE       ZIPCODE      TELNO        AGE OCCUPATION 
+----- ------ ------ ------- -------- ---------- ---------- ---------- ---------- 
+S_ID                                                                            
+------                                                                          
+C1179 Piggy  Quene  KL      KL            50960 1115698346         45 Teacher   
+S1902                                                                           
+                                                                                
+C2497 David  Thomas Setapak KL            54470  183294618         50 Banker    
+S2506                                                                           
+                                                                                
+C2991 Amad   solem  KL      KL            63000  189541292         69 Actor     
+S1040                                                                           
+                                                                                
+
+6 rows selected.
+
+SQL> update payment set amount_no = 1400 where P_ID = 'P00025';
+
+1 row updated.
+
+SQL> select * from payment ;
+
+P_ID     P_SYSTEM  P_DATE     AMOUNT_NO DONOR_ID                                
+-------- --------- --------- ---------- --------                                
+P00025   Cash      03-JAN-17       1400 C1569                                   
+P00028   Card      17-JAN-17        600 C1420                                   
+P00031   Card      14-FEB-17        300 C1430                                   
+P00037   Card      28-FEB-17        400 C1179                                   
+P00041   Cash      06-MAR-17       1500 C2497                                   
+
+SQL> delete from Payment where p_Id = 'P00025';
+
+1 row deleted.
+
+SQL> select * from payment ;
+
+P_ID     P_SYSTEM  P_DATE     AMOUNT_NO DONOR_ID                                
+-------- --------- --------- ---------- --------                                
+P00028   Card      17-JAN-17        600 C1420                                   
+P00031   Card      14-FEB-17        300 C1430                                   
+P00037   Card      28-FEB-17        400 C1179                                   
+P00041   Cash      06-MAR-17       1500 C2497                                   
+
+SQL> insert into payment values('P10025', `Cash',to_date('03/01/2016', 'dd/mm/yyyy'), 700, 'C2991');
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> insert into payment values('P10025',  'Cash ',to_date('03/01/2016', 'dd/mm/yyyy'), 700, 'C2991');
+
+1 row created.
+
+SQL> select * from payment ;'
+  2  select * from payment ;
+ERROR:
+ORA-01756: quoted string not properly terminated 
+
+
+SQL> select * from payment ;
+
+P_ID     P_SYSTEM  P_DATE     AMOUNT_NO DONOR_ID                                
+-------- --------- --------- ---------- --------                                
+P00028   Card      17-JAN-17        600 C1420                                   
+P00031   Card      14-FEB-17        300 C1430                                   
+P00037   Card      28-FEB-17        400 C1179                                   
+P00041   Cash      06-MAR-17       1500 C2497                                   
+P10025   Cash      03-JAN-16        700 C2991                                   
+
+
+
+SQL> Select d.donor_ID, d.fName , d.lName, p.P_ID, p.P_date
+  2  From donor d , payment p
+  3  Where d.Donor_ID = p.Donor_ID and p.amount_No>600
+  4  Order by p.P_date;
+
+DONOR FNAME  LNAME  P_ID     P_DATE                                             
+----- ------ ------ -------- ---------                                          
+C2991 Amad   Solem  P10025   03-JAN-16                                          
+C2497 David  Thomas P00041   06-MAR-17                                          
+
+SQL> select s.S_ID , s.fname , s.lName , d.Donor_ID
+  2  From staff s , donor d
+  3  Where s.S_ID=d.S_ID and s.S_ID='S1902' ;
+
+S_ID  FNAME  LNAME  DONOR                                                       
+----- ------ ------ -----                                                       
+S1902 Nabil  Showki C1179                                                       
+
+SQL> Select d.donor_ID , d.fName , s.S_ID,  s.fName
+  2  From donor d  ,  staff s
+  3  Where d.S_ID = s.S_ID and s.state= 'KL' and d.state='KL' ;
+
+DONOR FNAME  S_ID  FNAME                                                        
+----- ------ ----- ------                                                       
+C1420 Yang   S1040 John                                                         
+C2497 David  S2506 Ann                                                          
+C2991 Amad   S1040 John                                                         
+
+SQL> Select p.P_ID, d.donor_ID ,d.fName ,p.P_System,p.Amount_no
+  2  From donor d , payment p
+  3  Where d.Donor_ID=p.Donor_ID and p.P_Date>'01-Feb-2017' order by d.donor_ID;
+
+P_ID     DONOR FNAME  P_SYSTEM   AMOUNT_NO                                      
+-------- ----- ------ --------- ----------                                      
+P00037   C1179 Piggy  Card             400                                      
+P00031   C1430 Jack   Card             300                                      
+P00041   C2497 David  Cash            1500                                      
+
+SQL> select donor_ID,fName , lName , occupation , age
+  2  from donor
+  3  where fName like 'D%';
+
+DONOR FNAME  LNAME  OCCUPATIO        AGE                                        
+----- ------ ------ --------- ----------                                        
+C2497 David  Thomas Banker            50                                        
+
+SQL> Select R_Type, count(R_ID) as No_Of_Recipient
+  2  From recipient
+  3  Group by  R_Type;
+
+R_TYPE  NO_OF_RECIPIENT                                                         
+------- ---------------                                                         
+Miskin                2                                                         
+Fakir                 2                                                         
+Garimin               1                                                         
+Riqab                 1                                                         
+
+SQL> Select COUNT(*)AS total_donor
+  2  FROM payment
+  3  Where amount_no >350;
+
+TOTAL_DONOR                                                                     
+-----------                                                                     
+          4                                                                     
+
+SQL> Select MAX(Amount_no)AS Highest_Amount
+  2  FROM payment;
+
+HIGHEST_AMOUNT                                                                  
+--------------                                                                  
+          1500                                                                  
+
+SQL> select s.S_Id, concat(s.fName, s.lName) as Name, count(d.donor_Id)
+  2  from staff s, donor d
+  3  where s.S_Id = d.S_ID
+  4  group by s.S_Id, s.fName, s.lName
+  5  having count(d.donor_ID) > 1;
+
+S_ID  NAME         COUNT(D.DONOR_ID)                                            
+----- ------------ -----------------                                            
+S1040 John  White                  3                                            
+
+SQL> Select fName  , lName , occupation , age
+  2  From donor
+  3  Where Donor_ID > some (select Donor_ID from payment where Amount_No='600');
+
+FNAME  LNAME  OCCUPATIO        AGE                                              
+------ ------ --------- ----------                                              
+Imtiaz Sakib  Doctor            25                                              
+Jack   Frost  Writer            40                                              
+David  Thomas Banker            50                                              
+Amad   solem  Actor             69                                              
+
+
+
+SQL> spool off;
