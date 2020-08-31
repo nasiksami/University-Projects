@@ -1,0 +1,5 @@
+This project was done by me and my group mates during my first semester about an abstract online book rental system. Here is the overview of the project-
+Online Islamic books rental system – This system is developed to help people to find Islamic books per their choices. Since different people have different book preferences, 
+we perform careful feature selection to take advantage of the information reflected in the system user’s reviews. Furthermore, since renting is frequently a communal activity,
+we generated recommendations not just for an individual user, but also for a group of users.  This system needs to consider the information of all individuals in a group and 
+recommend books that satisfy the group of users according to some criterion.
