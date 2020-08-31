@@ -1,0 +1,4 @@
+This project was done by me and my group mates for the human computer interaction course during my 3rd semseter.
+In this project we selected a website and then detected all the glitches and usability lackings in it. We did prototyping 
+in different format and came up with our improvised solution for the website afer conducting several interviews and other 
+elicitation techniques were used. 
