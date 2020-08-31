@@ -1,0 +1,2 @@
+Basically in this project, we tried to compute the complexity of the algorithm and make one of our old project 
+more efficient by reducing the complexity.

@@ -1,0 +1,12 @@
+- Nescafe: 4 Piece(s)
+the Net Sales for this operation: RM13.2.
+
+- CostaCoffee: 1 Piece(s)
+- CocaCola: 3 Piece(s)
+the Net Sales for this operation: RM18.
+
+the Net Sales for this operation: RM0.
+
+- CostaCoffee: 10 Piece(s)
+the Net Sales for this operation: RM75.
+

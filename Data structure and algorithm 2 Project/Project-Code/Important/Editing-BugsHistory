@@ -1,0 +1,53 @@
+
+Bugs Details:
+
+1- There is a bug if the user choose transaction number more than 2
+	check that.(Done).
+  
+  - The sulotion is to use if-else-if to recheck the input. (solved by: 27/11/17).
+
+2- If the user enter characters by mistake the program is going to crash. (Done).
+  
+  - The sulotion is to take all users input as string. (Solved by 27/11/17).
+  - In CustomerClass i don't think it is a good idea because its all about calculations. (not anymore).
+  - Maybe later i can use my pre-defined function Which is ChangeStringToInt.(Done).
+
+3- the user has to insert notes iff he choose notes section and he/she cannot insert coins in the notes section
+	this is the same for coins. (Done).
+
+  - The problem has been solved for insert notes and changing the amount of notes from string to Int (solved by 30/11/17).
+  - Still didin't do the coins section till now. (Solved by 25/11/17).
+
+ 4-Make a file that you can put the amount of things you have, and to make the program real. (Done).
+  -The file has been made successfully for the user (Solved by 25/11/17).
+  -file that display the total purchases for the use (done by 25/11/17).
+  -The file has been made for the manager to refill the machine.(done by 25/11/17). 
+
+ 5-ManagerStuffs:
+  -Refill part to Refill the machine (Solved by 25/11/17). (Done).
+    --make the manager has access to know exactly how much the brand has before refill. (Done by 26/11/17).
+      ---Such as make an option which to be able to read "Machine capacity" file. (Done)
+  -Salary which is the Salary for each manager.(Done by 26/11/17).
+  -NetSales part to display the total sales since the machine is exist (Done by 26/11/17).
+    --Write the information from the usersClass and read it from the managers class.(Done by 26/11/17).
+    --ability to clear the file to avoid overload.(Done by 26/11/17).
+  -Make the manager to be able to access to the customerClass if possible.
+
+6-Saving all files in one folder(solved by 26/11/17).
+
+ Done:
+ 	- Customer class all are good, but still need to prompt the user if he want to left something  over.
+
+//Total work days: 6 days.
+
+Editing history:
+	-Prompt the user to enter how many pieces he needs once he insert the coins. (Done).
+	-Make a file to allow to check wheter you have the amount that the user need or not. (Done).
+	-Make a file which contains the recipt for the User after finishing all his purchases.(Done).
+  -Prompt the user to left something over.
+  -better to make (please wait...) once you make sleep to the program.
+
+  To-Do:
+    -At the end you might divide the work to several headerfile to be more readable. 
+    -After finishing the cooding try to designed the program mush better.
+    -Make the checker for the Usernames and password more efficient by using loop.
