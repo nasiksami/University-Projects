@@ -1,0 +1,95 @@
+//resetbutton
+  private void jbuttonresetActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        jtxtfries.setText("0");
+        jtxtsalad.setText("0");
+        jtxthamburger.setText("0");
+        jtxtonionrings.setText("0");
+        jtxtchickensalad.setText("0");
+        jtxtfishsandwich.setText("0");
+        jtxtchickensandwich.setText("0");
+        jtxtcheesesandwich.setText("0");
+        jtxthashbrown.setText("0");
+       jtxttoastedbagel.setText("0");
+       jtxtpineapplestick.setText("0");
+       jtxtchocolatemuffin.setText("0");
+       jtxtpancakessyrup.setText("0");
+       jtxtpaymentmethod.setText("0");
+       jtxttea.setText("0");
+       jtxtcola.setText("0");
+       jtxtcoffee.setText("0");
+       jtxtorange.setText("0");
+       jtxtbottlewater.setText("0");
+       jtxtvanilacone.setText("0");
+       jtxtvanilashake.setText("0");
+       jtxtstrawberryshake.setText("0");
+       jtxtchocolatemilkshake.setText("0");
+       jtxtchange.setText(null);
+       jtxtsubtotal.setText(null);
+       jtxttax.setText(null);
+       jtxttotal.setText(null);
+       //===================
+       
+       
+       
+       /*jtxtfries.setEnabled(false);
+       jtxtsalad.setEnabled(false);
+       jtxthamburger.setEnabled(false);
+       jtxtonionrings.setEnabled(false);
+       jtxtchickensalad.setEnabled(false);
+       jtxtfishsandwich.setEnabled(false);
+       jtxtcheesesandwich.setEnabled(false);
+       jtxtchickensandwich.setEnabled(false);
+       jtxthashbrown.setEnabled(false);
+       jtxttoastedbagel.setEnabled(false);
+       jtxtpineapplestick.setEnabled(false);
+       jtxtchocolatemuffin.setEnabled(false);
+       jtxtpancakessyrup.setEnabled(false);
+       jtxttea.setEnabled(false);
+       jtxtcoffee.setEnabled(false);
+       jtxtcola.setEnabled(false);
+       jtxtorange.setEnabled(false);
+       jtxtbottlewater.setEnabled(false);
+       jtxtvanilacone.setEnabled(false);
+       jtxtvanilashake.setEnabled(false);
+       jtxtstrawberryshake.setEnabled(false);
+       jtxtchocolatemilkshake.setEnabled(false);*/
+       
+       
+       
+       
+       //===================
+       
+       jchkfries.setSelected(false);
+       jchksalad.setSelected(false);
+       jchkchickensalad.setSelected(false);
+       jchkhamburger.setSelected(false);
+       jchkonionrings.setSelected(false);
+       jchkfishsandwich.setSelected(false);
+       jchkcheesesandwich.setSelected(false);
+       jchkchickensandwich.setSelected(false);
+       jchkhashbrown.setSelected(false);
+       jchktoastedbagel.setSelected(false);
+       jchkpineapplestick.setSelected(false);
+       jchkchocolatemuffin.setSelected(false);
+       jchkpancakessyrup.setSelected(false);
+       jchktea.setSelected(false);
+       jchkcola.setSelected(false);
+       jchkcoffee.setSelected(false);
+       jchkorange.setSelected(false);
+       jchkbottlewater.setSelected(false);
+       jchkvanilacone.setSelected(false);
+       jchkvanilashake.setSelected(false);
+       jchkstrawberryshake.setSelected(false);
+       jchkchocolatemilkshake.setSelected(false);
+       
+       
+       
+       
+       
+      
+       
+
+       
+       
+        
+    }                                            

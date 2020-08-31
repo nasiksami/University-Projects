@@ -1,0 +1,20 @@
+//overloading
+    class FastFoodmenu{
+        private void displaypayment(int payment){
+            System.out.println(payment);
+        }
+        private void displaypayment(double payment)
+        {
+            System.out.println(payment); 
+        }
+        public void displaychange(int change){
+            System.out.println(change);
+        } 
+        public void displaychange(double change){
+            System.out.println(change);
+        }
+        public void displayisubtotal(int isubtotal){
+                System.out.println(isubtotal);
+    }
+    
+    }

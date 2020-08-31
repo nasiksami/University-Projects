@@ -1,0 +1,8 @@
+//exit
+
+ private void jbuttonexitActionPerformed(java.awt.event.ActionEvent evt) {                                            
+      frame=new JFrame("Exit");
+        if(JOptionPane.showConfirmDialog(frame,"Confirm if you want to exit.","Fast Food", JOptionPane.YES_NO_OPTION)==JOptionPane.YES_NO_OPTION){
+            
+        System.exit(0);
+        }

@@ -1,0 +1,89 @@
+//totalbutton
+
+ private void jbuttontotalActionPerformed(java.awt.event.ActionEvent evt) {                                             
+        itemcost[0]=Double.parseDouble(jtxtfries.getText());
+        
+        itemcost[1]=Double.parseDouble(jtxtsalad.getText());
+        itemcost[2]=Double.parseDouble(jtxthamburger.getText());
+        itemcost[3]=Double.parseDouble(jtxtonionrings.getText());
+        itemcost[4]=Double.parseDouble(jtxtchickensalad.getText());
+        itemcost[5]=Double.parseDouble(jtxtfishsandwich.getText());
+        itemcost[6]=Double.parseDouble(jtxtcheesesandwich.getText());
+        itemcost[7]=Double.parseDouble(jtxtchickensandwich.getText());
+        itemcost[8]=Double.parseDouble(jtxthashbrown.getText());
+        itemcost[9]=Double.parseDouble(jtxttoastedbagel.getText()); 
+        itemcost[10]=Double.parseDouble(jtxtpineapplestick.getText());
+        itemcost[11]=Double.parseDouble(jtxtchocolatemuffin.getText());
+        itemcost[12]=Double.parseDouble(jtxtpancakessyrup.getText());
+        itemcost[13]=Double.parseDouble(jtxttea.getText());
+        itemcost[14]=Double.parseDouble(jtxtcola.getText()); 
+        itemcost[15]=Double.parseDouble(jtxtcoffee.getText());
+        itemcost[16]=Double.parseDouble(jtxtorange.getText());
+        itemcost[17]=Double.parseDouble(jtxtbottlewater.getText()); 
+        itemcost[18]=Double.parseDouble(jtxtvanilacone.getText());
+        itemcost[19]=Double.parseDouble(jtxtvanilashake.getText());
+        itemcost[20]=Double.parseDouble(jtxtstrawberryshake.getText());
+        itemcost[21]=Double.parseDouble(jtxtchocolatemilkshake.getText());
+        iChange=Double.parseDouble(jtxtpaymentmethod.getText());
+        
+        
+        String PaymentMethod= (String)jcombopaymentmethod.getSelectedItem();
+        
+        if(PaymentMethod=="Cash")
+        { 
+        iSubTotal=(itemcost[0]*price_fries)+(itemcost[1]*price_salad)+(itemcost[2]*price_hamburger)+(itemcost[3]*price_onionrings)+(itemcost[4]*price_chickensalad)+
+                (itemcost[5]*price_fishsandwich)+(itemcost[6]*price_cheesesandwich)+(itemcost[7]*price_chickensandwich)+
+                (itemcost[8]*price_hashbrown)+(itemcost[9]*price_toastedbagel)+(itemcost[10]*price_pineapplestick)+(itemcost[11]*price_chocolatemuffin)
+                +(itemcost[12]*price_pancakesyrup)+(itemcost[13]*price_tea)+(itemcost[14]*price_cola)+(itemcost[15]*price_coffee)+(itemcost[16]*price_orange)+
+               (itemcost[17]*price_bottlewater)+(itemcost[18]*price_vanilacone)+(itemcost[19]*price_vanilashake)+(itemcost[20]*price_strawberryshake)
+                +(itemcost[21]*price_chocolatemilkshake);
+        
+        if(iChange>=iSubTotal)
+        {
+        iTax=(iSubTotal*taxrate)/100;
+        String cTax=String.format("RM %.2f",iTax);
+        jtxttax.setText(cTax);
+        
+         String cSubTotal=String.format("RM %.2f",iSubTotal);
+        jtxtsubtotal.setText(cSubTotal);
+        
+        
+        String cTotal= String.format("RM %.2f",iSubTotal+iTax);
+        jtxttotal.setText(cTotal);
+        
+       String cChange=String.format("RM %.2f",iChange-(iSubTotal+iTax));
+       jtxtchange.setText(cChange);
+       
+        }
+        else{
+ 
+            JOptionPane.showMessageDialog(null,"Not enough Cash enterd.", "Fast Food", JOptionPane.OK_OPTION);
+        }
+        }
+        else if(PaymentMethod=="Debit card"||PaymentMethod=="Master Card"||PaymentMethod=="Visa Card")
+        {
+            
+        iSubTotal=(itemcost[0]*price_fries)+(itemcost[1]*price_salad)+(itemcost[2]*price_hamburger)+(itemcost[3]*price_onionrings)+(itemcost[4]*price_chickensalad)+
+                (itemcost[5]*price_fishsandwich)+(itemcost[6]*price_cheesesandwich)+(itemcost[7]*price_chickensandwich)+
+                (itemcost[8]*price_hashbrown)+(itemcost[9]*price_toastedbagel)+(itemcost[10]*price_pineapplestick)+(itemcost[11]*price_chocolatemuffin)
+                +(itemcost[12]*price_pancakesyrup)+(itemcost[13]*price_tea)+(itemcost[14]*price_cola)+(itemcost[15]*price_coffee)+(itemcost[16]*price_orange)+
+               (itemcost[17]*price_bottlewater)+(itemcost[18]*price_vanilacone)+(itemcost[19]*price_vanilashake)+(itemcost[20]*price_strawberryshake)
+                +(itemcost[21]*price_chocolatemilkshake);
+        
+        
+        iTax=(iSubTotal*taxrate)/100;
+        String cTax=String.format("RM %.2f",iTax);
+        jtxttax.setText(cTax);
+        
+         String cSubTotal=String.format("RM %.2f",iSubTotal);
+        jtxtsubtotal.setText(cSubTotal);
+        
+        
+        String cTotal= String.format("RM %.2f",iSubTotal+iTax);
+        jtxttotal.setText(cTotal);
+        }
+        
+        
+    }                                            
+
+    

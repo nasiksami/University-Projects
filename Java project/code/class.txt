@@ -1,0 +1,8 @@
+//all the class es
+public class FastFood extends javax.swing.JFrame
+public FastFood()
+class fastfood
+public class meal extends fastfood
+public class desserts extends fastfood
+public class drinks extends fastfood
+public class shakes extends fastfood

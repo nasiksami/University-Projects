@@ -1,0 +1,41 @@
+    //inhertence
+     class fastfood{
+         double price;
+         public void addition(double x, double y){
+             System.out.println(x+y);
+         }
+          public void subtraction(double x, double y){
+             System.out.println(x-y);//x is given money and y is totall amount
+         }
+          public class meal extends fastfood{
+              public void total(double x,double y){
+                  System.out.println(x);
+              }
+                      
+          }
+           public class  sandwich extends fastfood{
+              public void total(double x,double y){
+                  System.out.println(x);
+              }
+                      
+          }
+            public class desserts extends fastfood{
+              public void total(double x,double y){
+                  System.out.println(x);
+              }
+                      
+          }
+             public class drink extends fastfood{
+              public void total(double x,double y){
+                  System.out.println(x);
+              }
+                      
+          }
+              public class shake extends fastfood{
+              public void total(double x,double y){
+                  System.out.println(x);
+              }
+                      
+          }
+         
+     }

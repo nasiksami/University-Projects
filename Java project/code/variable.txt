@@ -1,0 +1,27 @@
+//all the variables used
+double price_bottlewater=1.9;
+double price_cheesesandwich=2.2;
+double price_chickensalad=2.5;
+double price_chickensandwich=4.00;
+double price_chocolatemilkshake=2.00;
+double price_chocolatemuffin=3.00;
+double price_coffee=1.2;                        
+double price_cola=1.5;
+double price_fishsandwich=3.00;
+double price_fries=3.00;
+double price_hamburger=2.7;
+double price_hashbrown=2.6;
+double price_onionrings=2.00;
+double price_orange=1.5;
+double price_pancakesyrup=1.4;
+double price_pineapplestick= 1.7;
+double price_salad=1.00;
+double price_strawberryshake=3.00;
+double price_tea=1.2;
+double price_toastedbagel=3.00;
+double price_vanilacone=3.8;
+double price_vanilashake=4.00;
+double taxrate=3.7;
+
+double iTax,iTotal,iSubTotal,iChange,iCost;
+double [] itemcost=new double[22];
