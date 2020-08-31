@@ -1,0 +1,2 @@
+In this project,I used the populat MNIST dataset to recognize the digitis from 0-9
+by using deep learning algorithm, Convolutional Neural Network (CNN). Here is the code and report for my finding.
