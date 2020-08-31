@@ -1,0 +1,4 @@
+In this group project, I have used sql and plsql in terms of making an abstract 
+restaurant management system. I used Function, procedure,cursors along with the queries.
+Later, had to connect the system with the web app to show some functionalities and store 
+the data outside of the system.
