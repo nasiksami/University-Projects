@@ -1,0 +1,7 @@
+This course project was based on the CPRE examination syllabus. The project is basically
+accumulation of 4 assignments on requirements elicitation, documentation, management and requirements modelling.
+Our project title was about IIUM Course Repository Management System. It proposed to solve one of the most tiring
+issue faced by our lecturers, in order to maintain the files in the course repository. Currently they had to use 
+cloud platform as well as the hard copies.Which were hard to handle.For our system, we took interview from the real 
+life stakeholders and also did other elicitation techniques. We modelled out system in various diagrams form different 
+perspectives. We documented by using proper template and notations. Finally we used JIRA to manage our system. 
