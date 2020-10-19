@@ -1,0 +1,4 @@
+This is a research-based project using Machine Learning and Deep Learning. Keeping the Sustainable Development Goals declared by the United Nations, we started to this project.
+We are looking for the optimal solution for the waste image classification. So far we have tried CNN, SVM, Random Forest and Decision Tree Algorithms to find the most suitable 
+one for providing the optimal solution.Now we are working on basically the deep learning part by using different architectures of Neural Networks. Soon we will deploy the end 
+product and result of our project.
